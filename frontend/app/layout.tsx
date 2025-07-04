@@ -1,13 +1,17 @@
 // 📁 layout.tsx
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import "bootstrap/dist/css/bootstrap.min.css"
-// import "@/public/client/css/all.min.css"
-// import "@/public/client/css/hover-min.css"
-// import "@/public/client/css/flag-icons.min.css"
-// import "@/public/client/css/style.css"
-// import "@/public/client/fonts/fontstyle.css"
-import "./globals.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
+// import './client/css/bootstrap.min.css'
+// import './client/css/all.min.css'
+// import './client/css/animate.css'
+// import './client/css/hover-min.css'
+// import './client/css/flag-icons.min.css'
+// import './client/css/style.css'
+// import './client/styles/news-articles.css'
+// import './client/slick/slick.css'
+// import './client/fonts/fontstyle.css'
+import './globals.css'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +39,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi">
+      <head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/client/images/favicon.png" type="image/gif" sizes="16x16" />
+        {/* Nếu cần font, bạn có thể import trong CSS hoặc ở đây */}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
